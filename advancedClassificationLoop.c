@@ -5,14 +5,15 @@ int isPalindrome(int num){
     if(0 <= tempNum && tempNum <= 9){
         return 1;
     }
-    
+    // the number backwards starts as 0
     int mirroedNum = 0;
+    //while number is not zero add to the number backwards the last digit
     while(tempNum != 0){
         int mod = tempNum%10;
         mirroedNum = mirroedNum*10 + mod;
         tempNum = tempNum/10;
     }
-
+    // if the same number return 1 - True else false.
     if(num == mirroedNum){
         return 1;
     } else {
